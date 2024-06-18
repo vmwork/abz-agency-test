@@ -1,38 +1,41 @@
 <template>
-  <div class="search">
-    <input
-      v-model="searchData"
-      class="input"
-      type="text"
-      placeholder="Введіть місто"
-      @keyup.enter="getCity(searchData)"
-    />
+  <div class="input">
+    <input v-model="formData" type="text" :placeholder="placeholder" />
+    <p class="textHelper">{{ textHelper }}</p>
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script setup>
+defineProps({
+  placeholder: {
+    type: String,
+    default: '',
+  },
+  textHelper: {
+    type: String,
+    default: '',
+  },
+});
+const formData = ref('');
+</script>
 
 <style lang="scss" scoped>
-.search {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  position: relative;
-  margin-left: 10px;
-
-  button {
-    border-radius: 10px;
-    background: none;
-    height: 40px;
-    cursor: pointer;
-  }
-}
 .input {
-  margin: 20px 0px;
-  margin-right: 10px;
+  input {
+    min-width: 328px;
+    padding: 17px 16px;
+    box-sizing: border-box;
+    border: 1px solid $border-gray;
+    border-radius: 4px;
+    font-size: 16px;
 
-  width: 300px;
-  padding: 10px;
-  border-radius: 10px;
+    &:focus {
+      outline: none;
+    }
+  }
+  .textHelper {
+    margin-left: 15px;
+    color: $text-gray;
+  }
 }
 </style>

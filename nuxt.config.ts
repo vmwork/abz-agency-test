@@ -5,6 +5,10 @@ export default defineNuxtConfig({
   //   typeCheck: true,
   // },
   css: ['~/assets/main.scss'],
+  alias: {
+    // '~': '/<srcDir>',
+    '@': '/<srcDir>',
+  },
   vite: {
     css: {
       preprocessorOptions: {
@@ -17,7 +21,6 @@ export default defineNuxtConfig({
   modules: ['@nuxt/image'],
   runtimeConfig: {
     public: {
-      apiSecret: process.env.API_KEY,
       apiBase: process.env.BASE_URL,
     },
   },

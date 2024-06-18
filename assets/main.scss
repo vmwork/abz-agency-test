@@ -6,6 +6,7 @@
     font-weight: 400;
     font-display: swap;
     src: url('./fonts/Nunito-Medium.ttf') format('truetype');
+    font-weight: normal;
 }
 body {
     margin: 0 auto;
@@ -14,7 +15,7 @@ body {
     font-family: 'Nunito';
     font-size: 16px;
     line-height: 26px;
-    font-weight: 400px;
+}
 h1 {
     font-size: 40px;
     line-height: 40px;
@@ -30,10 +31,14 @@ padding: 0;
 li{
 list-style-type: none;
 }
+p{
+    margin: 0px;
+}
 
 button{
     cursor: pointer;
     border-radius: 80px;
+    min-width: 100px;
     border: none;
     padding: 4px 23px;
     font-family: 'Nunito';
@@ -44,5 +49,4 @@ button{
     &:hover {
         background-color: $button-hover-color;
       }
-}
 }
