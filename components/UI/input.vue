@@ -38,4 +38,13 @@ const formData = ref('');
     color: $text-gray;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .input {
+    input {
+      min-width: 380px;
+      padding: 17px 16px;
+    }
+  }
+}
 </style>

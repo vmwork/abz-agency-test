@@ -58,4 +58,11 @@ const changeUploadFile = () => {
     min-width: 150px;
   }
 }
+@media screen and (min-width: 768px) {
+  .imgLoader {
+    .upload-mask {
+      min-width: 210px;
+    }
+  }
+}
 </style>

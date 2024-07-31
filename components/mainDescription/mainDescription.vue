@@ -40,4 +40,16 @@
     margin-top: 25px;
   }
 }
+@media screen and (min-width: 768px) {
+  .main-decription {
+    padding-bottom: 90px;
+    h1 {
+      margin-top: 75px;
+      width: 380px;
+    }
+    p {
+      width: 380px;
+    }
+  }
+}
 </style>

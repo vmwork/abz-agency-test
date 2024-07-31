@@ -11,24 +11,32 @@
           :text-helper="'+38 (XXX) XXX - XX - XX'"
         ></UIInput>
       </div>
-      <legend class="legend">Select your position</legend>
+
       <client-only>
-        <div
-          v-for="position in positions"
-          :key="position.id"
-          class="radio-buttons"
-        >
-          <UIRadioButton
-            :id="position.id"
-            :name="position.name"
-          ></UIRadioButton>
+        <div class="radio-buttons-wrapper">
+          <legend class="legend">Select your position</legend>
+          <div class="">
+            <div
+              v-for="(position, i) in positions"
+              :key="position.id"
+              class="radio-buttons"
+            >
+              <UIRadioButton
+                :id="position.id"
+                :name="position.name"
+                :checked="i === 0 ? true : false"
+              ></UIRadioButton>
+            </div>
+          </div>
         </div>
       </client-only>
-      <div class="">
+      <div class="imgLoader">
         <UIImgLoader></UIImgLoader>
       </div>
       <div class="button">
-        <UIButton :bg-color="'dark-gray'" :title="'Sign up'"></UIButton>
+        <div class="">
+          <UIButton :bg-color="'dark-gray'" :title="'Sign up'"></UIButton>
+        </div>
       </div>
     </div>
   </div>
@@ -78,6 +86,33 @@ getPositions();
     display: flex;
     justify-content: center;
     margin-top: 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .sendForm {
+    padding: 100px 16px 100px 16px;
+    .sendForm-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      width: 704px;
+    }
+    .radio-buttons-wrapper {
+      width: 504px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .legend {
+      margin-top: 18px;
+      margin-left: -35px;
+    }
+    .imgLoader {
+      width: 720px;
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 </style>

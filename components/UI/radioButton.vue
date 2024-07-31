@@ -6,6 +6,7 @@
       type="radio"
       name="drone"
       value="huey"
+      :checked="checked"
     />
     <label class="label" :for="id">{{ name }}</label>
   </div>
@@ -20,6 +21,10 @@ defineProps({
   name: {
     type: String,
     default: 'name',
+  },
+  checked: {
+    type: Boolean,
+    default: true,
   },
 });
 const emit = defineEmits(['clickOnButton']);

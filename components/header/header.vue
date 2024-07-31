@@ -12,12 +12,16 @@
   display: flex;
   justify-content: space-between;
   padding: 13px 16px;
-
   align-items: center;
   nav {
     min-width: 210px;
     display: flex;
     justify-content: space-around;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-wrapper {
+    padding: 13px 32px;
   }
 }
 </style>
